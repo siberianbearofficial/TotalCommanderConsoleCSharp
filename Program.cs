@@ -6,9 +6,10 @@ namespace TotalCommanderConsoleCSharp
     {
         static void Main(string[] args)
         {
-            // FileManager.GetDirectories();
-            UserInterface ui = new UserInterface(ConsoleColor.Green, ConsoleColor.Black);
-            (new CommandReader(ui)).Start();
+            UserInterface.defaultForegroundColor = ConsoleColor.Cyan;
+            UserInterface.defaultBackgroundColor = ConsoleColor.Black;
+            UserInterface.PrepareConsole();
+            CommandReader.Start();
         }
     }
 }
